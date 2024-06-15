@@ -1,0 +1,13 @@
+
+.hero {
+    background-image: linear-gradient(-120deg,
+            rgba(255, 0, 0, 0.516),
+            rgba(0, 0, 255, 0.314)),
+        url(colo\ colo.jpg);
+    width: 100%;
+    height: 650px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

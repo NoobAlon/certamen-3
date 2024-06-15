@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoLO Colo</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-light">
+    <header class="container-fluid p-5 bg-primary text-white text-center">
+        <h1 class="hero">Registro de Jugadores Historicos de Colo Colo</h1>
+    </header>
+    <main class="container-fluid">
+        <div class="row mt-3">
+            <div class="col-4">
+                <form action="" class="card">
+                    <div class="card-header">
+                        <h5>ingresa tus datos historicos </h5>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <label>Run</label>
+                            <input type="text" class="form-control" id="run" name="run" onblur="verificar(this.id)">
+                            <div id="e-run"></div>
+                        </div>
+                        <div>
+                            <label>Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" onblur="verificar(this.id)">
+                            <div id="e-nombre"></div>
+                        </div>
+                        <div>
+                            <label>Apodo</label>
+                            <input type="text" class="form-control" id="apodo" name="apodo" onblur="verificar(this.id)">
+                            <div id="e-apodo"></div>
+                        </div>
+                        <div>
+                            <label>Fecha Debut</label>
+                            <input type="date" class="form-control" id="fechaDebut" name="fechaDebut" onblur="verificar(this.id)">
+                            <div id="e-fechaDebut"></div>
+                        </div>
+                        <div>
+                            <label>Numero de Camiseta</label>
+                            <input type="text" class="form-control" id="numerocamiseta" name="numerocamiseta" onblur="verificar(this.id)">
+                            <div id="e-numerocamiseta"></div>
+                        </div>
+                        <div>
+                            <label>Goles Anotados</label>
+                            <input type="text" class="form-control" id="goles" name="goles" onblur="verificar(this.id)"  maxlength="9"
+                            onkeypress="return soloNumeros(event)">
+                            <div id="e-goles"></div>
+                        </div>
+                        <div>
+                            <label>Campeonatos Ganados</label>
+                            <input type="number" class="form-control" id="campeonatos" name="campeonatos" onblur="verificar(this.id)" maxlength="9"
+                            onkeypress="return soloNumeros(event)" min="3">
+                            <div id="e-campeonatos"></div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                        <input type="reset" value="Limpiar" class="btn btn-info" onclick="limpiar()">
+                        <input type="button" id="btnGuardar" value="Guardar" class="btn btn-success">
+                    </div> 
+                </form>
+            </div>
+            <div class="col-8">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Run</th>
+                                <th>Nombre</th>
+                                <th>Apodo</th>
+                                <th>Fecha Debut</th>
+                                <th>Numero De Camiseta</th>
+                                <th>Goles Anotados</th>
+                                <th>Campeonatos Ganados</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="contenido">
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/sweetalert2.min.js"></script>
+    <script src="utilidades.js"></script>
+    
+    <script src="funciones.js" type="module"></script>
+</body>
+
+</html>
